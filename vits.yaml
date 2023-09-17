@@ -177,7 +177,7 @@ model:
 
   optim:
     _target_: torch.optim.AdamW
-    lr: 2e-4https://github.com/ganymedenet/nemo_cfg/tree/master
+    lr: 2e-4
     betas: [0.9, 0.99]
     eps: 1e-9
   
