@@ -191,6 +191,8 @@ trainer:
   accelerator: gpu
   strategy: ddp_find_unused_parameters_true
   precision: 32
+  # resume_if_exists: true
+  # resume_from_checkpoint: "/path/to/your/checkpoint.ckpt"
   # amp_backend: 'apex'
   # amp_level: 'O2'
   # benchmark: true
