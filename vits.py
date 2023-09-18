@@ -31,8 +31,10 @@ def main(cfg):
 
 
     trainer.callbacks.extend([pl.callbacks.LearningRateMonitor()])
-    # ckpt_path="last"
+
     trainer.fit(model)
+    # trainer.fit(model, ckpt_path="last")
+
 
 
 if __name__ == '__main__':
