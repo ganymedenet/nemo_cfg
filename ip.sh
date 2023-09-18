@@ -9,4 +9,4 @@ sudo python3 get-pip.py
 pip3 install jupyter
 
 pip3 --version
-python --version
+python3 --version
