@@ -19,6 +19,6 @@ mkdir -p datasets
 wget https://raw.githubusercontent.com/NVIDIA/NeMo/main/scripts/dataset_processing/get_librispeech_data.py
 
 # Run the script to download the LibriSpeech dataset parts
-python get_librispeech_data.py --data_root=datasets --data_set="dev_clean,test_clean"
+python3 get_librispeech_data.py --data_root=datasets --data_set="dev_clean,test_clean"
 
 exec "$@"
