@@ -7,6 +7,8 @@ BRANCH=main
 wget https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/examples/tts/vits.py
 
 mkdir -p experiments
+chmod -R 777 ./experiments
+
 mkdir -p conf
 
 cd conf
@@ -26,5 +28,7 @@ pip3 install sox tqdm
 
 # Run the script to download the LibriSpeech dataset parts
 python3 get_librispeech_data.py --data_root=datasets --data_set="dev_clean,test_clean"
+
+
 
 exec "$@"
