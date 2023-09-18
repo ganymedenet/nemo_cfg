@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install sox
+
 BRANCH=main
 
 #wget https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/examples/tts/vits.py
