@@ -4,13 +4,13 @@ sudo apt-get install sox
 
 BRANCH=main
 
-#wget https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/examples/tts/vits.py
+wget https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/examples/tts/vits.py
 
 mkdir -p experiments
 mkdir -p conf
 
 cd conf
-wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/vits.yaml
+# wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/vits.yaml
 wget https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/scripts/tts_dataset_files/ipa_cmudict-0.7b_nv23.01.txt
 wget https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/scripts/tts_dataset_files/heteronyms-052722
 cd ..
