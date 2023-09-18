@@ -25,6 +25,7 @@ def main(cfg):
     model = VitsModel(cfg=cfg.model, trainer=trainer)
 
     trainer.callbacks.extend([pl.callbacks.LearningRateMonitor()])
+    # ckpt_path="last"
     trainer.fit(model)
 
 
