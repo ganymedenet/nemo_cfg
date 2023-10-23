@@ -4,7 +4,7 @@ server {
     listen 80 default_server;
     # server_name 34.42.1.141;
 
-    server_name 23.251.150.14;
+    server_name 34.28.17.91;
 
     location / {
         proxy_pass http://127.0.0.1:8000;
@@ -17,7 +17,7 @@ server {
 
 server {
     listen 443 ssl;
-    server_name 23.251.150.14;
+    server_name 34.28.17.91;
     ssl_certificate /etc/ssl/certs/nginx.crt;
     ssl_certificate_key /etc/ssl/private/nginx.key;
 
