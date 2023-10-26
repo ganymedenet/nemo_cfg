@@ -11,4 +11,4 @@ yes | ./gpu.sh
 
 curl -o nginx.sh -y https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/nginx.sh
 chmod +x nginx.sh
-./nginx.sh
+yes | ./nginx.sh
