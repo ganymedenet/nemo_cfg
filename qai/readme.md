@@ -1,4 +1,5 @@
 
+rm setup.sh
 curl -o setup.sh -L https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/setup.sh
 chmod +x setup.sh
 ./setup.sh
