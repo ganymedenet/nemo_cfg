@@ -1,7 +1,12 @@
 #!/bin/bash
 
+rm python.sh
+curl -o python.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/bash/python.sh
+chmod +x python.sh
+./python.sh
+
 rm install.sh
-curl -o install.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/install.sh
+curl -o install.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/bash/install.sh
 chmod +x install.sh
 ./install.sh
 
