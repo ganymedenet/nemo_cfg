@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm install.sh
-curl -o gpu.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/install.sh
+curl -o install.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/install.sh
 chmod +x install.sh
 ./install.sh
 
