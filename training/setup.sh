@@ -6,10 +6,10 @@ chmod +x install.sh
 ./install.sh
 
 
-rm gpu.sh
-curl -o gpu.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/gpu.sh
-chmod +x gpu.sh
-./gpu.sh
+#rm gpu.sh
+#curl -o gpu.sh https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/gpu.sh
+#chmod +x gpu.sh
+#./gpu.sh
 
 
 rm config.sh
