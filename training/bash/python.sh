@@ -26,3 +26,5 @@ sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3
 sudo ln -sf /usr/local/bin/python3.10 /usr/bin/python
 
 alias python='/usr/local/bin/python3.10'
+
+sudo ln -sf /usr/local/bin/python3.10 /usr/bin/python
