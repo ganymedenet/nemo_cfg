@@ -9,6 +9,16 @@ central1 - 34.28.17.91
 east4 - 34.145.239.41
 
 
+python3.10 vits.py \
+  model.sample_rate=16000 \
+  train_dataset=datasets/dev_clean.json \
+  validation_datasets=datasets/test_clean.json \
+  phoneme_dict_path=conf/ipa_cmudict-0.7b_nv23.01.txt \
+  heteronyms_path=conf/heteronyms-052722 \
+  trainer.max_epochs=200 \
+  trainer.accelerator="gpu" \
+  trainer.check_val_every_n_epoch=1 \
+  trainer.devices=1 
 
 
 python3.10 vits.py \
@@ -20,7 +30,8 @@ python3.10 vits.py \
   trainer.max_epochs=200 \
   trainer.accelerator="gpu" \
   trainer.check_val_every_n_epoch=1 \
-  trainer.devices=1
+  trainer.devices=1 \
+  checkpoint_path=nemo_experiments/VITS/2023-11-03_23-09-43/checkpoints/VITS--loss_gen_all=32.1769-epoch\=100-last.ckpt
 
 
 ps aux | less
