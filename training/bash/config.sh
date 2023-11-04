@@ -1,7 +1,7 @@
 
 
 # Download vits.py
-rm -rf vits.yaml
+rm -rf vits.py
 wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/scripts/vits.py
 
 # Create the 'conf' directory and download vits.yaml into it

@@ -19,23 +19,19 @@ from nemo.utils.exp_manager import exp_manager
 
 checkpoint_path = "/nemo_experiments/VITS/2023-11-03_23-09-43/checkpoints/VITS--loss_gen_all=32.1769-epoch=100-last.ckpt"
 
+
 @hydra_runner(config_path="conf", config_name="vits")
 def main(cfg):
-    # trainer = pl.Trainer(
-    #     use_distributed_sampler=False,
-    #     **cfg.trainer
-    # )
-
     trainer = pl.Trainer(
         use_distributed_sampler=False,
-        resume_from_checkpoint=checkpoint_path,
         **cfg.trainer
     )
+
     exp_manager(trainer, cfg.get("exp_manager", None))
     model = VitsModel(cfg=cfg.model, trainer=trainer)
 
     trainer.callbacks.extend([pl.callbacks.LearningRateMonitor()])
-    trainer.fit(model)
+    trainer.fit(model, ckpt_path=checkpoint_path)
 
 
 if __name__ == '__main__':
