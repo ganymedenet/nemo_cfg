@@ -1,10 +1,12 @@
 
 
 # Download vits.py
+rm -rf vits.yaml
 wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/scripts/vits.py
 
 # Create the 'conf' directory and download vits.yaml into it
 mkdir -p conf && cd conf
+rm -rf vits.yaml
 wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/scripts/vits.yaml && cd ..
 
 BRANCH="main"

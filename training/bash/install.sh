@@ -13,8 +13,7 @@ pip3.10 install faiss-cpu
 
 pip3.10 install "git+https://github.com/NVIDIA/NeMo.git@main#egg=nemo_toolkit[all]"
 pip3.10 install --no-cache-dir torch torchvision torchaudio -f https://download.pytorch.org/whl/cu122/torch_stable.html
-pip3.10 install pytorch_lightning
-pip3.10 install pytorch-lightning
+# pip3.10 install pytorch-lightning # pytorch-lightning<=2.0.7,>=2.0
 
 pip3.10 list | grep torch
 
