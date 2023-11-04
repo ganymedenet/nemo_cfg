@@ -33,12 +33,16 @@ def main(cfg):
 
     trainer.callbacks.extend([pl.callbacks.LearningRateMonitor()])
 
-    if checkpoint_path:
-        print(f"Checkpoint path: {checkpoint_path}")
-        trainer.fit(model, ckpt_path=checkpoint_path)
-    else:
-        print("Checkpoint path: NULL")
-        trainer.fit(model)
+    trainer.fit(model, ckpt_path=checkpoint_path)
+
+    # trainer.fit(model)
+
+    # if checkpoint_path:
+    #     print(f"Checkpoint path: {checkpoint_path}")
+    #     trainer.fit(model, ckpt_path=checkpoint_path)
+    # else:
+    #     print("Checkpoint path: NULL")
+    # trainer.fit(model)
 
 
 if __name__ == '__main__':
