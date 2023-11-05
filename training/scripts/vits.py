@@ -18,7 +18,7 @@ from nemo.core.config import hydra_runner
 from nemo.utils.exp_manager import exp_manager
 
 checkpoint_path = None
-checkpoint_path = "nemo_experiments/VITS/2023-11-03_23-09-43/checkpoints/VITS--loss_gen_all=32.1769-epoch=100-last.ckpt"
+checkpoint_path = "nemo_experiments/VITS/2023-11-04_20-55-29/checkpoints/VITS--loss_gen_all=32.9442-epoch=200-last.ckpt"
 
 
 @hydra_runner(config_path="conf", config_name="vits")
