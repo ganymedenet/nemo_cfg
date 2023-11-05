@@ -25,7 +25,7 @@ n_window_size: 800  # Adjusted for 16kHz
 n_window_stride: 200  # Adjusted for 16kHz
 n_fft: 800  # Adjusted for 16kHz, can be the same as n_window_size
 lowfreq: 0
-highfreq: 8000  # Nyquist frequency for 16kHz sample rate
+highfreq: null  # Nyquist frequency for 16kHz sample rate
 window: hann
 
 model:
