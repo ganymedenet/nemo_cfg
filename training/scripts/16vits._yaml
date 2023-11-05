@@ -14,20 +14,19 @@ sup_data_types: null
 phoneme_dict_path: "conf/ipa_cmudict-0.7b_nv23.01.txt"
 heteronyms_path: "conf/heteronyms-052722"
 
-# Default values from librosa.pyin
-pitch_fmin: 65.40639132514966
-pitch_fmax: 2093.004522404789
+# Adjusted pitch parameters for 16kHz sample rate
+pitch_fmin: 65  # Adjust as needed
+pitch_fmax: 760  # Typically less than half the Nyquist frequency
 
-# ljspeech dataset
-sample_rate: 22050
+# Adjusted sample rate and corresponding window and FFT parameters
+sample_rate: 16000
 n_mel_channels: 80
-n_window_size: 1024
-n_window_stride: 256
-n_fft: 1024
+n_window_size: 800  # Adjusted for 16kHz
+n_window_stride: 200  # Adjusted for 16kHz
+n_fft: 800  # Adjusted for 16kHz, can be the same as n_window_size
 lowfreq: 0
-highfreq: null
+highfreq: null  # Nyquist frequency for 16kHz sample rate
 window: hann
-
 
 model:
   pitch_fmin: ${pitch_fmin}
