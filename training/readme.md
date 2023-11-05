@@ -37,6 +37,9 @@ ps aux | less
 cat /proc/5511/fd/1
 tail -f /proc/5511/fd/1
 
+2256
+tail -f /proc/22568/fd/1
+
 
 wget https://raw.githubusercontent.com/Lightning-AI/lightning/master/requirements/collect_env_details.py
 python collect_env_details.py

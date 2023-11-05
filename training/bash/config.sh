@@ -12,7 +12,5 @@ wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/scri
 BRANCH="main"
 
 wget -O conf/ipa_cmudict-0.7b_nv23.01.txt https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/scripts/tts_dataset_files/ipa_cmudict-0.7b_nv23.01.txt
-
-# Download heteronyms-052722 to the 'conf' directory
 wget -O conf/heteronyms-052722 https://raw.githubusercontent.com/NVIDIA/NeMo/$BRANCH/scripts/tts_dataset_files/heteronyms-052722
 
