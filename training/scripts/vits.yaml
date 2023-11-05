@@ -18,14 +18,26 @@ heteronyms_path: "conf/heteronyms-052722"
 pitch_fmin: 65.40639132514966
 pitch_fmax: 2093.004522404789
 
-sample_rate: 22050
+# ljspeech dataset
+#sample_rate: 22050
+#n_mel_channels: 80
+#n_window_size: 1024
+#n_window_stride: 256
+#n_fft: 1024
+#lowfreq: 0
+#highfreq: null
+#window: hann
+
+# LibriSpeech
+sample_rate: 16000
 n_mel_channels: 80
-n_window_size: 1024
-n_window_stride: 256
-n_fft: 1024
+n_window_size: 512  # or 768, as preferred
+n_window_stride: 128  # or 192, as preferred
+n_fft: 512  # or same as n_window_size
 lowfreq: 0
-highfreq: null
+highfreq: null  # or explicitly 8000, if required by your specific use case
 window: hann
+
 
 model:
   pitch_fmin: ${pitch_fmin}

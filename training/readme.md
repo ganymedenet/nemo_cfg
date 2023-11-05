@@ -34,8 +34,8 @@ nohup python3.10 vits.py \
 
 
 ps aux | less
-cat /proc/14589/fd/1
-tail -f /proc/14589/fd/1
+cat /proc/5511/fd/1
+tail -f /proc/5511/fd/1
 
 
 wget https://raw.githubusercontent.com/Lightning-AI/lightning/master/requirements/collect_env_details.py

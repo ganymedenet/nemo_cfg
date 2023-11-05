@@ -1,4 +1,5 @@
 # Install sox using apt-get
+sudo apt install openssh-server
 sudo apt-get -y install sox libsndfile1 ffmpeg git
 
 # Install the sox Python package using pip
