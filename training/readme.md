@@ -33,12 +33,28 @@ nohup python3.10 vits.py \
   trainer.devices=1 &
 
 
-ps aux | less
-cat /proc/5511/fd/1
-tail -f /proc/5511/fd/1
 
-2256
-tail -f /proc/22944/fd/1
+nohup python3.10 vits.py \
+  model.sample_rate=22050 \
+  train_dataset=datasets/dev_clean.json \
+  validation_datasets=datasets/test_clean.json \
+  phoneme_dict_path=conf/ipa_cmudict-0.7b_nv23.01.txt \
+  heteronyms_path=conf/heteronyms-052722 \
+  trainer.max_epochs=500 \
+  trainer.accelerator="gpu" \
+  trainer.check_val_every_n_epoch=1 \
+  trainer.devices=1 &
+
+ps aux | less
+
+
+# 1017 T4
+tail -f /proc/1017/fd/1
+
+
+# 23208 p100
+cat /proc/23208/fd/1
+tail -f /proc/23208/fd/1
 
 
 wget https://raw.githubusercontent.com/Lightning-AI/lightning/master/requirements/collect_env_details.py
