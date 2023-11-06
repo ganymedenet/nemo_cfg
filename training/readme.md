@@ -49,7 +49,7 @@ ps aux | less
 
 
 # 1017 T4
-tail -f /proc/1017/fd/1
+tail -f /proc/3941/fd/1
 
 
 # 23208 p100
