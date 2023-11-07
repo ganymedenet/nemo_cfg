@@ -18,7 +18,7 @@ from nemo.core.config import hydra_runner
 from nemo.utils.exp_manager import exp_manager
 
 checkpoint_path = None
-checkpoint_path = "nemo_experiments/VITS/2023-11-04_20-55-29/checkpoints/VITS--loss_gen_all=32.9442-epoch=200-last.ckpt"
+checkpoint_path = "/home/sergey/nemo_experiments/VITS/2023-11-06_22-10-49/checkpoints/VITS--loss_gen_all=31.9614-epoch=100-last.ckpt"
 
 
 @hydra_runner(config_path="conf", config_name="vits")
@@ -33,9 +33,9 @@ def main(cfg):
 
     trainer.callbacks.extend([pl.callbacks.LearningRateMonitor()])
 
-    # trainer.fit(model, ckpt_path=checkpoint_path)
+    trainer.fit(model, ckpt_path=checkpoint_path)
 
-    trainer.fit(model)
+    # trainer.fit(model)
 
     # if checkpoint_path:
     #     print(f"Checkpoint path: {checkpoint_path}")
