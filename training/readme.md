@@ -52,6 +52,10 @@ ps aux | less
 cat /proc/4687/fd/1
 tail -f /proc/4687/fd/1
 
+# 173300 T4 30gb
+
+tail -f /proc/173300/fd/1
+
 
 # 23208 p100
 cat /proc/23208/fd/1
