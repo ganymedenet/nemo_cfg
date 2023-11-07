@@ -97,7 +97,7 @@ model:
       pitch_fmax: ${model.pitch_fmax}
     
     dataloader_params:
-      num_workers: 4
+      num_workers: 8
       pin_memory: false
 
     batch_sampler:
@@ -131,7 +131,7 @@ model:
       drop_last: false
       shuffle: false
       batch_size: 16
-      num_workers: 4
+      num_workers: 8
       pin_memory: false
 
   preprocessor:
