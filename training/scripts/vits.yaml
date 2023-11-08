@@ -189,7 +189,7 @@ model:
 
 trainer:
   num_nodes: 1
-  devices: 2
+  devices: ${trainer.devices}
   accelerator: gpu
   strategy: ddp_find_unused_parameters_true
   precision: 32
