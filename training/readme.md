@@ -52,8 +52,8 @@ ps aux | less
 cat /proc/18833/fd/1
 tail -f /proc/18833/fd/1
 
-# 23593 2T4 30gb
-tail -f /proc/23593/fd/1
+# 24427 2T4 30gb
+tail -f /proc/24427/fd/1
 
 
 # 23208 p100
