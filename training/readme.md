@@ -30,7 +30,7 @@ nohup python3.10 vits.py \
   trainer.max_epochs=400 \
   trainer.accelerator="gpu" \
   trainer.check_val_every_n_epoch=1 \
-  trainer.devices=2 &
+  trainer.devices=1 &
 
 
 
@@ -48,9 +48,9 @@ nohup python3.10 vits.py \
 ps aux | less
 
 
-# 1067 T4
-cat /proc/1067/fd/1
-tail -f /proc/1067/fd/1
+# 1084 T4
+cat /proc/1084/fd/1
+tail -f /proc/1084/fd/1
 
 # 1110 2T4 30gb
 cat /proc/1076/fd/1
