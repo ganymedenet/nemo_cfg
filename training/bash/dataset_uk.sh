@@ -5,8 +5,9 @@ mkdir -p datasets
 
 wget -O ./datasets/dataset.zip https://storage.googleapis.com/qai-datasets/data/DodgeWoodall/SPEAKER_02/dataset.zip
 unzip -o ./datasets/dataset.zip -d ./datasets
+mv ./datasets/data/DodgeWoodall/SPEAKER_02/dataset.json ./datasets
 
-rm -rf datatset.py
-wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/scripts/datatset.py
+rm -rf dataset.py
+wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/training/scripts/dataset.py
 
-python datatset.py
+python dataset.py
