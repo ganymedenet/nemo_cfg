@@ -40,7 +40,7 @@ nohup python3.10 vits.py \
   validation_datasets=datasets/test_clean.json \
   phoneme_dict_path=conf/ipa_cmudict-0.7b_nv23.01.txt \
   heteronyms_path=conf/heteronyms-052722 \
-  trainer.max_epochs=100 \
+  trainer.max_epochs=400 \
   trainer.accelerator="gpu" \
   trainer.check_val_every_n_epoch=1 \
   trainer.devices=1 &
@@ -48,9 +48,9 @@ nohup python3.10 vits.py \
 ps aux | less
 
 
-# 1084 T4
+# 1087 T4
 cat /proc/1084/fd/1
-tail -f /proc/1084/fd/1
+tail -f /proc/1087/fd/1
 
 # 1110 2T4 30gb
 cat /proc/1076/fd/1
