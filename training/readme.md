@@ -35,7 +35,7 @@ nohup python3.10 vits.py \
 
 
 nohup python3.10 vits.py \
-  model.sample_rate=22050 \
+  model.sample_rate=44100 \
   train_dataset=datasets/dev_clean.json \
   validation_datasets=datasets/test_clean.json \
   phoneme_dict_path=conf/ipa_cmudict-0.7b_nv23.01.txt \

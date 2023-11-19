@@ -32,10 +32,10 @@ def main(cfg):
     model = VitsModel(cfg=cfg.model, trainer=trainer)
 
     trainer.callbacks.extend([pl.callbacks.LearningRateMonitor()])
+    #
+    # trainer.fit(model, ckpt_path=checkpoint_path)
 
-    trainer.fit(model, ckpt_path=checkpoint_path)
-
-    # trainer.fit(model)
+    trainer.fit(model)
 
     # if checkpoint_path:
     #     print(f"Checkpoint path: {checkpoint_path}")
