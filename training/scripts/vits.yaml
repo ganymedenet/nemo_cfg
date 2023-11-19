@@ -13,8 +13,8 @@ validation_datasets: ???
 sup_data_path: null
 sup_data_types: null
 
-phoneme_dict_path: "./conf/ipa_cmudict-0.7b_nv23.01.txt"
-heteronyms_path: "./conf/heteronyms-052722"
+phoneme_dict_path: "conf/ipa_cmudict-0.7b_nv23.01.txt"
+heteronyms_path: "conf/heteronyms-052722"
 
 # Default values from librosa.pyin
 pitch_fmin: 65.40639132514966
