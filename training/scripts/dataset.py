@@ -16,7 +16,9 @@ for line in lines:
     ln = json.loads(line)
     # print(ln)
     ln["audio_filepath"] = f"{current_directory}/datasets/{ln['audio_filepath']}"
-    final.append(f"{json.dumps(ln)}\n")
+
+    if ln["duration"] < 20:
+        final.append(f"{json.dumps(ln)}\n")
 
 # Calculate the split index (80% of the total)
 split_index = int(len(final) * 0.8)
