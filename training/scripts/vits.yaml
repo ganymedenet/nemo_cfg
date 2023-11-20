@@ -2,8 +2,6 @@
 # If you want to train model on other dataset, you can change config values according to your dataset.
 # Most dataset-specific arguments are in the head of the config file, see below.
 
-# https://github.com/NVIDIA/NeMo/blob/main/examples/tts/conf/vits_44100.yaml
-
 # TODO: remove unnecessary arguments, refactoring
 
 name: VITS
@@ -23,12 +21,13 @@ pitch_fmax: 2093.004522404789
 # ljspeech dataset
 sample_rate: 44100
 n_mel_channels: 80
-n_window_size: 2048
-n_window_stride: 512
-n_fft: 2048
+n_window_size: 1024
+n_window_stride: 256
+n_fft: 1024
 lowfreq: 0
 highfreq: null
 window: hann
+
 
 model:
   pitch_fmin: ${pitch_fmin}
@@ -46,7 +45,7 @@ model:
   mel_fmax: null
 
   n_speakers: 0
-  segment_size: 16384
+  segment_size: 8192
   c_mel: 45
   c_kl: 1.
   use_spectral_norm: false
@@ -102,7 +101,7 @@ model:
       pin_memory: false
 
     batch_sampler:
-      batch_size: 16
+      batch_size: 32
       boundaries: [32,300,400,500,600,700,800,900,1000]
       num_replicas: ${trainer.devices}
       shuffle: true
@@ -132,7 +131,7 @@ model:
       drop_last: false
       shuffle: false
       batch_size: 16
-      num_workers: 8
+      num_workers: 4
       pin_memory: false
 
   preprocessor:
@@ -185,13 +184,12 @@ model:
     eps: 1e-9
 
     sched:
-      name: CosineAnnealing
-      max_steps: 1000000
-      min_lr: 1e-5
+      name: ExponentialLR
+      lr_decay: 0.999875
 
 trainer:
   num_nodes: 1
-  devices: ${trainer.devices}
+  devices: 2
   accelerator: gpu
   strategy: ddp_find_unused_parameters_true
   precision: 32

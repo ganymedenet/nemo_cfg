@@ -50,7 +50,7 @@ ps aux | less
 
 # 1087 T4
 cat /proc/1084/fd/1
-tail -f /proc/1149/fd/1
+tail -f /proc/1826/fd/1
 
 # 1110 2T4 30gb
 cat /proc/1076/fd/1
