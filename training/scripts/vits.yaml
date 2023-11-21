@@ -19,7 +19,7 @@ pitch_fmin: 65.40639132514966
 pitch_fmax: 2093.004522404789
 
 # ljspeech dataset
-sample_rate: 44100
+sample_rate: 22050
 n_mel_channels: 80
 n_window_size: 1024
 n_window_stride: 256
@@ -101,7 +101,7 @@ model:
       pin_memory: false
 
     batch_sampler:
-      batch_size: 32
+      batch_size: 8
       boundaries: [32,300,400,500,600,700,800,900,1000]
       num_replicas: ${trainer.devices}
       shuffle: true
@@ -130,7 +130,7 @@ model:
     dataloader_params:
       drop_last: false
       shuffle: false
-      batch_size: 16
+      batch_size: 8
       num_workers: 4
       pin_memory: false
 

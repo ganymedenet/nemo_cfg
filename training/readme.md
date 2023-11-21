@@ -35,12 +35,12 @@ nohup python3.10 vits.py \
 
 
 nohup python3.10 vits.py \
-  model.sample_rate=44100 \
+  model.sample_rate=22050 \
   train_dataset=datasets/dev_clean.json \
   validation_datasets=datasets/test_clean.json \
   phoneme_dict_path=conf/ipa_cmudict-0.7b_nv23.01.txt \
   heteronyms_path=conf/heteronyms-052722 \
-  trainer.max_epochs=400 \
+  trainer.max_epochs=100 \
   trainer.accelerator="gpu" \
   trainer.check_val_every_n_epoch=1 \
   trainer.devices=1 &
@@ -49,8 +49,8 @@ ps aux | less
 
 
 # 1087 T4
-cat /proc/1084/fd/1
-tail -f /proc/1826/fd/1
+cat /proc/1756/fd/1
+tail -f /proc/1235/fd/1
 
 # 1110 2T4 30gb
 cat /proc/1076/fd/1
