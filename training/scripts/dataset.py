@@ -17,7 +17,7 @@ for line in lines:
     # print(ln)
     ln["audio_filepath"] = f"{current_directory}/datasets/{ln['audio_filepath']}"
 
-    if 5 < ln["duration"] < 20:
+    if 1 < ln["duration"] < 10:
         final.append(f"{json.dumps(ln)}\n")
 
 # Calculate the split index (80% of the total)
