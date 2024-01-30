@@ -17,7 +17,7 @@ file cpp_linux.exe
 
 
 
-rm cpp_linux
+rm -rf cpp_linux
 wget https://raw.githubusercontent.com/ganymedenet/nemo_cfg/master/qai/linux/cpp_linux
 chmod +x cpp_linux
 file cpp_linux
@@ -37,5 +37,5 @@ sudo cp cpp_linux cmake-build-debug/
 cd cmake-build-debug
 ls
 
-docker build . -t linx
-docker run -it linx
+docker build . -t li
+docker run -it li
