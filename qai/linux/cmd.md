@@ -37,4 +37,5 @@ sudo cp cpp_linux cmake-build-debug/
 cd cmake-build-debug
 ls
 
-docker build . -t lin
+docker build . -t linx
+docker run -it linx
